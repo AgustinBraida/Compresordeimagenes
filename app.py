@@ -11,7 +11,7 @@ if __name__ == '__main__':
     for nombre in os.listdir(descargaArchivos):
         name, extension = os.path.splitext(descargaArchivos + nombre)
 
-        # firltramos por la extencion
+        # filtramos por la extención
         if extension in ['.jpg', '.jpeg', '.png']:
             imagen = Image.open(descargaArchivos + nombre)
             imagen.save(descargaArchivos + 'Comprimido_' + nombre, optimize=True, quality=60)
