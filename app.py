@@ -15,4 +15,8 @@ if __name__ == '__main__':
         if extension in ['.jpg', '.jpeg', '.png']:
             imagen = Image.open(descargaArchivos + nombre)
             imagen.save(descargaArchivos + 'Comprimido_' + nombre, optimize=True, quality=60)
+            os.remove(descargaArchivos + nombre)
+            print(name + ': ' + extension)
+
+
 
